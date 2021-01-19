@@ -1,10 +1,10 @@
 import React from "react";
 
-const Balance = (balance) => {
+const Balance = () => {
   return (
     <React.Fragment>
-      <h2>Current Balance: </h2>
-      <h2>${balance}</h2>
+      <h2>CURRENT BALANCE </h2>
+      <h1 className="balance_h">$0.00</h1>
     </React.Fragment>
   );
 };
