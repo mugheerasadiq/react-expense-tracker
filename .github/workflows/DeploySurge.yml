@@ -12,7 +12,11 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: 12
+        
+      - name: Build React app
+        run: npm build
+        
       - name: Install Surge
         run: npm install -g surge
       - name: Run surge
-        run: surge ./ react-expense-tracker-mugheera.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build react-expense-tracker-mugheera.surge.sh --token ${{ secrets.SURGE_TOKEN }}
