@@ -47,6 +47,63 @@ h2 {
   font-weight: bold;
 }
 
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list li {
+  background-color: #fff;
+
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid green;
+}
+
+.list li.plus:hover {
+  background-color: green;
+  color: white;
+}
+
+.list li.minus {
+  border-right: 5px solid red;
+}
+
+.list li.minus:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.addTransaction {
+  text-align: left;
+}
+.addTransaction input {
+  margin: 5px 0px;
+  height: 40px;
+}
+
+.addTransaction button {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  height: 50px;
+  background-color: rgb(166, 51, 219);
+  color: floralwhite;
+}
+
+.addTransaction button:hover {
+  background-color: rgb(112, 20, 155);
+  color: floralwhite;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
