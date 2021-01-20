@@ -5,10 +5,8 @@ const Balance = () => {
   const { transactions } = useContext(GlobalContext);
   let balance = 0;
 
-  {
-    transactions.map((transaction) => {
-      return (balance += parseInt(transaction.amount));
-    });
+  for (let i = 0; i < transactions.length; i++) {
+    balance += parseInt(transactions[i].amount);
   }
 
   return (
