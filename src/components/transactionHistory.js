@@ -1,22 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
+import { Transaction } from "./transaction";
 
 export const TransactionHistory = () => {
+  const { transactions } = useContext(GlobalContext);
+
   return (
     <React.Fragment>
       <h3>Transaction History</h3>
       <hr></hr>
       <div>
         <ul className="list">
-          <li className="plus">
-            Project Income
-            <span>+$1,0000.0</span>
-            <button>X</button>
-          </li>
-          <li className="minus">
-            Blood Test
-            <span>-$500</span>
-            <button>X</button>
-          </li>
+          {transactions.map((transaction) => (
+            <Transaction key={transaction.id} transaction={transaction} />
+          ))}
         </ul>
       </div>
     </React.Fragment>

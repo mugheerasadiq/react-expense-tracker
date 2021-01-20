@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 
 const Balance = () => {
+  const { transactions } = useContext(GlobalContext);
+  let balance = 0;
+
+  {
+    transactions.map((transaction) => {
+      return (balance += transaction.amount);
+    });
+  }
+
   return (
     <React.Fragment>
       <h2>CURRENT BALANCE </h2>
-      <h1 className="balance_h">$0.00</h1>
+      <h1 className="balance_h">${balance}</h1>
     </React.Fragment>
   );
 };
