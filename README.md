@@ -17,7 +17,7 @@ React app using hooks (useState, useContext, useReducer) and the context API.
 
 ## URL
 
-<a href="http://react-expense-tracker-mugheera.surge.sh/"></a>
+[Clickme](http://react-expense-tracker-mugheera.surge.sh/)
 
 ## Interface
 
