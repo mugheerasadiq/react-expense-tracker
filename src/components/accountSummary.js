@@ -8,8 +8,10 @@ export const AccountSummary = () => {
 
   {
     transactions.map((transaction) => {
-      income += transaction.amount > 0 ? transaction.amount : 0;
-      expense += transaction.amount < 0 ? transaction.amount : 0;
+      income +=
+        parseInt(transaction.amount) > 0 ? parseInt(transaction.amount) : 0;
+      expense +=
+        parseInt(transaction.amount) < 0 ? parseInt(transaction.amount) : 0;
     });
   }
 

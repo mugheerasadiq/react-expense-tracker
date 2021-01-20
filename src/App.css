@@ -68,9 +68,13 @@ h2 {
   border-right: 5px solid green;
 }
 
+.list button {
+  color: black;
+}
+
 .list li.plus:hover {
   background-color: green;
-  color: white;
+  color: #fff;
 }
 
 .list li.minus {

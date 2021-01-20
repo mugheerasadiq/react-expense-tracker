@@ -8,7 +8,7 @@ export const Transaction = ({ transaction }) => {
   return (
     <li className={TransactionType}>
       {transaction.description}
-      <span>{transaction.amount}</span>
+      <span>${transaction.amount}</span>
       <button onClick={() => delTransaction(transaction.id)}>X</button>
     </li>
   );

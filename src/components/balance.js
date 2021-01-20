@@ -7,7 +7,7 @@ const Balance = () => {
 
   {
     transactions.map((transaction) => {
-      return (balance += transaction.amount);
+      return (balance += parseInt(transaction.amount));
     });
   }
 
